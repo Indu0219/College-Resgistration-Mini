@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    
+    <title>College Registration</title>
+    <style>
+        
+        body {
+background-image:url(https://img.freepik.com/free-photo/businessman-using-tablet-online-connect_1421-103.jpg?w=1060&t=st=1691081478~exp=1691082078~hmac=632023bf22bbda8eb36df4218b5cddb3afa5b3dc2f467b3d7b0f398036ee164c);
+     background-repeat:no repeat;
+     background-size:cover;
+     background-position:center;
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+	    font-weight:bold;
+	    
+        }
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border:2px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>KCE REGISTERATION FORM</h1>
+    <form id="registration-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="programme">Programme</label>
+        <select id="programme" required>
+            <option value="">Select your major</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Electronics and communication">Electrical and communication</option>
+            <option value="Mechtronics">Mechtronics</option>
+            <option value="Civil">Civil</option>
+             <option value="Cyber security">Cyber security</option>
+        </select>
+
+        <button type="button" onclick="submitForm()">Register</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const programme = document.getElementById("programme").value;
+
+      
+            window.location.href = "success.html";
+        }
+    </script>
+</body>
+</html>
